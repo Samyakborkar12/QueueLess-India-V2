@@ -1,12 +1,9 @@
 from flask import Flask
+from routes.home_routes import home_bp
 
 app = Flask(__name__)
 
-@app.route("/")
-def home():
-    return {
-        "message": "Welcome to QueueLess India V2 API"
-    }
+app.register_blueprint(home_bp)
 
 if __name__ == "__main__":
     app.run(debug=True)
