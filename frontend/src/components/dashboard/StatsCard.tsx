@@ -1,19 +1,19 @@
-interface StatsCardProps {
+type StatsCardProps = {
   title: string;
-  value: string;
-}
+  value: string | number;
+};
 
 export default function StatsCard({
   title,
   value,
 }: StatsCardProps) {
   return (
-    <div className="bg-white rounded-xl shadow p-6">
-      <h2 className="text-lg font-semibold">
+    <div className="bg-white rounded-xl shadow-md p-6 border">
+      <h3 className="text-gray-500 text-sm">
         {title}
-      </h2>
+      </h3>
 
-      <p className="text-4xl font-bold mt-4">
+      <p className="text-3xl font-bold mt-2">
         {value}
       </p>
     </div>

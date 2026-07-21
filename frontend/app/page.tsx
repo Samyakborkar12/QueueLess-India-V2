@@ -2,30 +2,37 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col justify-center items-center">
+    <main className="min-h-screen flex flex-col justify-center items-center gap-6">
 
       <h1 className="text-6xl font-bold">
         QueueLess India V2
       </h1>
 
-      <p className="mt-4 text-slate-600">
-        Smart Digital Queue Management Platform
+      <p className="text-lg text-gray-600">
+        Smart Digital Queue Management System
       </p>
 
-      <div className="flex gap-4 mt-8">
+      <div className="flex gap-4">
 
         <Link
           href="/login"
-          className="px-6 py-3 bg-black text-white rounded-lg"
+          className="bg-black text-white px-5 py-3 rounded-lg"
         >
           Login
         </Link>
 
         <Link
           href="/register"
-          className="px-6 py-3 border rounded-lg"
+          className="border px-5 py-3 rounded-lg"
         >
           Register
+        </Link>
+
+        <Link
+          href="/dashboard"
+          className="bg-blue-600 text-white px-5 py-3 rounded-lg"
+        >
+          Dashboard
         </Link>
 
       </div>
@@ -33,4 +40,3 @@ export default function HomePage() {
     </main>
   );
 }
-

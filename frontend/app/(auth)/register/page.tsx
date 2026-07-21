@@ -1,30 +1,14 @@
-import Link from "next/link";
+import RegisterForm from "../../../src/components/auth/RegisterForm";
 
-export default function HomePage() {
+export default function RegisterPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center gap-5">
-      <h1 className="text-5xl font-bold">
-        QueueLess India V2
-      </h1>
+    <main className="min-h-screen flex items-center justify-center bg-slate-100">
+      <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
+        <h1 className="text-3xl font-bold text-center mb-2">
+          Create Account
+        </h1>
 
-      <p>
-        Smart Digital Queue Management
-      </p>
-
-      <div className="flex gap-4">
-        <Link
-          href="/login"
-          className="bg-black text-white px-5 py-3 rounded"
-        >
-          Login
-        </Link>
-
-        <Link
-          href="/register"
-          className="border px-5 py-3 rounded"
-        >
-          Register
-        </Link>
+        <RegisterForm />
       </div>
     </main>
   );
